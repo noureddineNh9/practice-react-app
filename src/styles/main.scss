@@ -1,0 +1,52 @@
+@import "base/base";
+@import "abstract/variables";
+
+.Navbar {
+   ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+         padding: 4px 8px;
+         margin: 5px 0;
+         position: relative;
+         &::before {
+            content: "▹";
+            position: absolute;
+            left: -10px;
+            top: 2px;
+            color: $color-green-2;
+            font-size: 2rem;
+            line-height: 2rem;
+         }
+         a {
+            &:link,
+            &:visited {
+               font-size: 1.4rem;
+               letter-spacing: 1px;
+               font-weight: 300;
+               text-decoration: none;
+               color: #767676;
+               transition: all 0.4s;
+            }
+            &.active,
+            &:hover {
+               letter-spacing: 2px;
+               color: $color-green-2;
+            }
+         }
+      }
+   }
+}
+
+.btn {
+   padding: 5px 10px;
+   color: $color-green-1;
+   border: 1px solid $color-green-1;
+   border-radius: 5px;
+   margin: 8px;
+   &:disabled {
+      color: $color-grey-6;
+      border: 1px solid $color-grey-6;
+   }
+}
