@@ -4,12 +4,12 @@ import thunkMiddleware from "redux-thunk";
 
 import { requestEmployees, searchEmployees } from "./reducers";
 
-const logger = createLogger();
+//const logger = createLogger();
 const rootReducers = combineReducers({ requestEmployees, searchEmployees });
 
 const store = createStore(
    rootReducers,
-   applyMiddleware(thunkMiddleware, logger)
+   applyMiddleware(thunkMiddleware /*, logger*/)
 );
 
 export default store;

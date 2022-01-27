@@ -32,8 +32,9 @@ const config = {
             use: ["style-loader", "css-loader", "sass-loader"],
          },
          {
-            test: /favicon\.ico$/,
-            use: "file-loader?name=[name].[ext]",
+            test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
+            exclude: /node_modules/,
+            use: ["file-loader?name=[name].[ext]"], // ?name=[name].[ext] is only necessary to preserve the original file name
          },
       ],
    },

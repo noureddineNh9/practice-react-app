@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import "../dist/favicon.ico";
 
 // parameter state comes from index.js provider store state(rootReducers)
 
